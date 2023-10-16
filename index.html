@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="slider.css" />
+
+    <title>Responsive Slider</title>
+  </head>
+  <body>
+    <div
+      class="slider-container"
+      data-config='{
+        "autoplay": true,
+        "interval": 3000,
+        "slides": [
+          {
+            "img": "https://res.cloudinary.com/diqqf3eq2/image/upload/v1595959131/person-2_ipcjws.jpg",
+            "name": "Samira Ali",
+            "title": "English language Instructor at Arab Academy for Science,Technology and Maritime",
+            "description": "\"I&apos;d like to express my deep thanks to you and your team forthis outstanding work and support, I am really impressed with the total reform of my friends&apos; CV.This is what I know about Bayt.com and I will keep recommending your services to my colleages and friends Thanks\""
+          },
+          {
+            "img": "https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883417/person-3_ipa0mj.jpg",
+            "name":  "Ahmad Tareq",
+            "title": "Sector Specialist at Ministry of Education",
+            "description": "\"What a terrific job you have done on my CV...I nearly cried when I saw it and read it.. Many, many thanks for the professional and fantastic work you have done so far on my CV.\""
+          },
+          {
+            "img": "https://res.cloudinary.com/diqqf3eq2/image/upload/v1595959121/person-1_aufeoq.jpg",
+            "name": "Heba Smadi",
+            "title": "English language Instructor at Arab Academy for Science,Technology and Maritime",
+            "description": "\"I&apos;d like to express my deep thanks to you and your team forthis outstanding work and support, I am really impressed with the total reform of my friends&apos; CV.This is what I know about Bayt.com and I will keep recommending your services to my colleages and friends Thanks\""
+          },
+          {
+            "img": "https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883334/person-1_rfzshl.jpg",
+            "name": "Ziad Mustafa",
+            "title": "Sector Specialist at Ministry of Education",
+            "description": "\"What a terrific job you have done on my CV...I nearly cried when I saw it and read it.. Many, many thanks for the professional and fantastic work you have done so far on my CV.\""
+          }
+        ]
+      }
+      '
+    >
+      <!-- This is the structure of our slider that we will buid using Javascript -->
+
+      <!-- <div class="slider">
+        <div class="slide">
+          <p class="text"></p>
+          <img src="" alt="" />
+          <div class="info">
+            <h3></h3>
+            <p class="title"></p>
+          </div>
+          <div class="button">View CV Sample</div>
+        </div>
+         ......... 
+      </div>
+      <div class="dots"></div>
+      <div class="arrows">
+        <div class="prev" aria-label="Previous Slide" tabindex="0">⮜</div>
+        <div class="next" aria-label="Next Slide" tabindex="0">⮞</div>
+      </div> -->
+    </div>
+    <hr />
+    <div
+      class="slider-container"
+      data-config='{
+      "autoplay": false,
+      "interval": 3000,
+      "slides": [
+        {
+          "img": "https://res.cloudinary.com/diqqf3eq2/image/upload/v1595959131/person-2_ipcjws.jpg",
+          "name": "Samira Ali",
+          "title": "English language Instructor at Arab Academy for Science,Technology and Maritime",
+          "description": "\"I&apos;d like to express my deep thanks to you and your team forthis outstanding work and support, I am really impressed with the total reform of my friends&apos; CV.This is what I know about Bayt.com and I will keep recommending your services to my colleages and friends Thanks\""
+        },
+        {
+          "img": "https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883417/person-3_ipa0mj.jpg",
+          "name":  "Ahmad Tareq",
+          "title": "Sector Specialist at Ministry of Education",
+          "description": "\"What a terrific job you have done on my CV...I nearly cried when I saw it and read it.. Many, many thanks for the professional and fantastic work you have done so far on my CV.\""
+        },
+        {
+          "img": "https://res.cloudinary.com/diqqf3eq2/image/upload/v1595959121/person-1_aufeoq.jpg",
+          "name": "Heba Smadi",
+          "title": "English language Instructor at Arab Academy for Science,Technology and Maritime",
+          "description": "\"I&apos;d like to express my deep thanks to you and your team forthis outstanding work and support, I am really impressed with the total reform of my friends&apos; CV.This is what I know about Bayt.com and I will keep recommending your services to my colleages and friends Thanks\""
+        },
+        {
+          "img": "https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883334/person-1_rfzshl.jpg",
+          "name": "Ziad Mustafa",
+          "title": "Sector Specialist at Ministry of Education",
+          "description": "\"What a terrific job you have done on my CV...I nearly cried when I saw it and read it.. Many, many thanks for the professional and fantastic work you have done so far on my CV.\""
+        }
+      ]
+    }
+    '
+    ></div>
+    <hr />
+    <div
+      class="slider-container"
+      data-config='{
+      "autoplay": true,
+      "interval": null,
+      "slides": [
+        {
+          "img": "https://res.cloudinary.com/diqqf3eq2/image/upload/v1595959131/person-2_ipcjws.jpg",
+          "name": "Samira Ali",
+          "title": "English language Instructor at Arab Academy for Science,Technology and Maritime",
+          "description": "\"I&apos;d like to express my deep thanks to you and your team forthis outstanding work and support, I am really impressed with the total reform of my friends&apos; CV.This is what I know about Bayt.com and I will keep recommending your services to my colleages and friends Thanks\""
+        },
+        {
+          "img": "https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883417/person-3_ipa0mj.jpg",
+          "name":  "Ahmad Tareq",
+          "title": "Sector Specialist at Ministry of Education",
+          "description": "\"What a terrific job you have done on my CV...I nearly cried when I saw it and read it.. Many, many thanks for the professional and fantastic work you have done so far on my CV.\""
+        },
+        {
+          "img": "https://res.cloudinary.com/diqqf3eq2/image/upload/v1595959121/person-1_aufeoq.jpg",
+          "name": "Heba Smadi",
+          "title": "English language Instructor at Arab Academy for Science,Technology and Maritime",
+          "description": "\"I&apos;d like to express my deep thanks to you and your team forthis outstanding work and support, I am really impressed with the total reform of my friends&apos; CV.This is what I know about Bayt.com and I will keep recommending your services to my colleages and friends Thanks\""
+        },
+        {
+          "img": "https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883334/person-1_rfzshl.jpg",
+          "name": "Ziad Mustafa",
+          "title": "Sector Specialist at Ministry of Education",
+          "description": "\"What a terrific job you have done on my CV...I nearly cried when I saw it and read it.. Many, many thanks for the professional and fantastic work you have done so far on my CV.\""
+        }
+      ]
+    }
+    '
+    ></div>
+
+    <script src="slider.js"></script>
+  </body>
+</html>

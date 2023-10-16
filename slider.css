@@ -1,0 +1,150 @@
+/* 
+How to understand this CSS Code in a simple way?
+
+1. Create a container for the slider with position: relative. Also, set the width and height for it.
+2. Inside the container, create three div tags, one for the slider, one for dots, and one for arrows,
+each one with position: absolute.
+3. Using the previous step, we can position the three div tags relative to the container. The dots and
+arrows  will always be in the same place, but the slider needs more work.
+4.When we create slides inside sliders, they will be on top of each other. To make them line up, 
+assign display: flex to slider div (The parent div of the slides).
+5. The most important step: Set the width of each slide to the full width of screen. This makes calculations very easy.
+5.You will see a horizontal scroll to see all the slides. To hide it, set overflow: hidden for the container.
+6.For the slider to work, you just have to make the slides move in the horizontal direction. To do that,set 
+transform: translateX() for the slider with a value determined using Javascript.
+*/
+
+/*
+Important note: 
+When you work with multiple layers using the position property, make sure the user can interact with the elements.
+Here we have the arrows on a layer, and the dots on a layer, and if we give each of 
+them a width and height equal to the width and height of the parent, then of course, one of them will not work.
+In other words, If we are able to click on one of the dots, we certainly can not click on the arrows and vice versa.
+Therefore, assign each of them appropriate dimensions so that it does not affect the other.
+*/
+
+.slider-container {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 95vh;
+}
+
+.slider-container .slider {
+  display: flex;
+  transition: transform 0.5s ease;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.slider-container .slide {
+  min-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  color: grey;
+}
+
+.slider-container .dots {
+  position: absolute;
+  bottom: 6%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+}
+
+.slider-container .dot {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin: 0 5px;
+  background-color: grey;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.slider-container .dot.active {
+  background-color: #333;
+}
+
+.slider-container .arrows {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  display: none;
+}
+
+.slider-container .prev,
+.slider-container .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: grey;
+  font-size: 60px;
+  cursor: pointer;
+}
+
+.slider-container .prev {
+  left: 20%;
+}
+.slider-container .next {
+  right: 20%;
+}
+
+.slider-container .text {
+  max-width: 90%;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  line-height: 2;
+  color: grey;
+  height: 25vh;
+  overflow: auto;
+}
+
+.slider-container img {
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.slider-container .info {
+  max-width: 75%;
+  height: 15vh;
+  overflow: auto;
+}
+.slider-container h3 {
+  text-transform: capitalize;
+}
+
+.slider-container .button {
+  background-color: blue;
+  width: 150px;
+  padding: 10px;
+  margin-top: 30px;
+  color: white;
+}
+
+@media (min-width: 992px) {
+  .slider-container .arrows {
+    display: block;
+  }
+  .slider-container .text {
+    max-width: 50%;
+    height: 20vh;
+  }
+
+  .slider-container .info {
+    max-width: 50%;
+    height: 15vh;
+  }
+}
